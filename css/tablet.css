@@ -1,0 +1,228 @@
+@media (max-width: 768px) {
+  /* BANNER */
+  #banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../images/banner.jpg);
+    background-position: center;
+  }
+
+  /* NAVBAR */
+  .nav-bar-container-group-item3 {
+    max-width: 50px;
+  }
+  .default-avatar {
+    display: none;
+  }
+  .nav-bar-container-group {
+    font-size: 12px;
+  }
+  .nav-bar-container-group-item1,
+  .nav-bar-container-group-item2,
+  .nav-bar-container-group-item4,
+  .nav-bar-container-group-item5 {
+    min-width: 100px;
+  }
+
+  /* ABOUT */
+  #about .container {
+    max-width: 100%;
+  }
+  #target {
+    padding: 40px;
+  }
+
+  #about p {
+    font-size: 12px;
+  }
+  #about ul {
+    font-size: 12px;
+  }
+  li span {
+    font-weight: 600;
+  }
+
+  /* JOB */
+  .job-container {
+    height: 1200px;
+  }
+
+  .job-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* grid-template-columns: repeat(2, 1fr); */
+  }
+  .job-container--smallbox {
+    width: 50%;
+  }
+
+  .job-container--smallbox-1 {
+    overflow: hidden;
+    height: 500px;
+    order: 1;
+  }
+  .job-container--smallbox-1:hover {
+    overflow: scroll;
+    /* Ẩn Scrollbar bottom đi */
+    overflow-x: hidden;
+  }
+
+  .job-container-content {
+    padding: 10px 5px;
+  }
+  /* Chỉnh lại chiều cao lưới để khi co màn hình thì box này không bị swap sang cột mới */
+  .job-container--smallbox-hobby {
+    grid-template-rows: 50px 1fr;
+  }
+  .job-container-content-hobby {
+    justify-content: flex-start;
+    row-gap: 0px;
+    padding-left: 20px;
+    padding-right: 40px;
+  }
+  .job-container-content-langskill {
+    padding: 10px 30px;
+  }
+  .job-container--smallbox-education {
+    order: 5;
+  }
+  .job-container--smallbox-activity {
+    order: 4;
+  }
+  .job-container--smallbox-hobby {
+    order: 6;
+  }
+  .job-container--smallbox-language {
+    order: 3;
+  }
+  .job-container--smallbox-skill {
+    order: 2;
+  }
+
+  /* CERTIFICATE*/
+  #certificate .container {
+    max-width: 100%;
+  }
+  .certificate-img {
+    height: 150px;
+  }
+
+  .certificate-box {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    padding: 0 20px;
+  }
+
+  .certificate-tilte {
+    margin: 20px 0px 20px 0px;
+    font-size: 28px;
+  }
+  .certificate-content-box {
+    margin-bottom: 20px;
+  }
+  .certificate-content-title {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  .certificate-content-detail {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+  .certificate-box-border::after {
+    content: "";
+    position: absolute;
+    height: 90%;
+    width: 1.5px;
+    background-color: #d6c08d;
+    left: 0;
+  }
+  .certificate-box-border {
+    border-bottom: 2px solid #d6c08d;
+    padding-right: 0;
+  }
+  .certificate-box-1 {
+    border-bottom: 2px solid #d6c08d;
+    padding-left: 0;
+  }
+  .certificate-box-3 {
+    padding-left: 0;
+  }
+
+  /* PROJECT */
+  #project .container {
+    max-width: 90%;
+  }
+
+  .container-project {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+  }
+  .project-title {
+    margin-top: 40px;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .project-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-box::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border: 1px solid #dee2e6;
+    border-top: none;
+  }
+
+  .project-content {
+    border-bottom: none;
+  }
+
+  .img-project {
+    max-width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .project-name {
+    font-size: 12px;
+  }
+  .project-timeline {
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    row-gap: 0;
+    align-items: center;
+  }
+  .icon-position {
+    grid-column: 2 / -1;
+  }
+  .project-timeline-year {
+    font-size: 9px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-content {
+    height: auto;
+  }
+
+  .project-content-lastitem {
+    height: auto;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  /* FOOTER */
+  .container-footer li span {
+    font-weight: 300;
+  }
+}

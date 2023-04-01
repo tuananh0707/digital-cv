@@ -1,0 +1,524 @@
+/*
+        SPACING SYSTEM (px)
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+        FONT SIZE SYSTEM (px)
+        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+        */
+/*
+        Main COLOR: #087f5b
+        GREY COLOR: #343a40
+        */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  color: #343a40;
+  font-family: arial, sans-serif, tahoma;
+  /* font-size: 12px; */
+  line-height: 1.7;
+}
+a {
+  text-decoration: none;
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+
+.job-container--smallbox {
+  margin-top: 20px;
+}
+/* BANNER */
+#banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/banner.jpg); /*Đường dẫn tương đối trong css*/
+  background-size: cover;
+
+  height: 60vh;
+  position: relative;
+}
+/* Căn chỉnh box chứa chữ đến vị trí mong muốn trên banner */
+.banner-section {
+  color: #fff;
+  text-align: center;
+  line-height: 1.3;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+}
+.banner-section h1 {
+  font-size: 32px;
+  font-weight: 500;
+}
+.banner-section p {
+  font-size: 9px;
+  color: #adb5bd;
+}
+/* NAV-BAR */
+#nav-bar {
+  text-align: center;
+}
+.nav-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.nav-bar-container-group {
+  padding: 10px 14px;
+  border: 1px solid #dee2e6;
+  height: 40px;
+  border-top: none;
+  border-bottom: none;
+}
+/* Đặt cho các item làm flex container để thiết lập khoảng cách giữa các phần tử gần hơn, icon và chữ gần nhau hơn */
+.nav-bar-container-group-item1,
+.nav-bar-container-group-item2,
+.nav-bar-container-group-item4,
+.nav-bar-container-group-item5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-bar-container-group-item2,
+.nav-bar-container-group-item5 {
+  border-left: none;
+}
+.nav-bar-container-group-item3 {
+  width: 300px;
+  padding: 0;
+  /* line-height: 1.3; */
+  border: none;
+}
+/* thiết lập cho phần tên trung tâm nav */
+/* .item3-name {
+  font-size: 18px;
+}
+.item3-des {
+  font-size: 7.5px;
+  color: #adb5bd;
+} */
+.nav-bar-container-link:link,
+.nav-bar-container-link:visited {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 9px;
+}
+
+#personal-info {
+  padding-top: 20px;
+}
+.icon-nav-bar {
+  color: #2a9ddb;
+}
+.default-avatar {
+  height: 40px;
+  transform: scale(3);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  /* đổ bóng tại chỗ, không set x y để tạo đường viền ngoài cùng*/
+  box-shadow: 0px 0px 1px #adb5bd;
+}
+/* ABOUT SECTION */
+
+.info li {
+  list-style: none;
+}
+.about-container {
+  display: flex; /*Vì đây là bố cục 1 chiều nên sử dụng Flex sẽ hợp lý hơn là Grid*/
+}
+#target {
+  flex: 1;
+  background-color: #f5f5f5;
+  padding: 30px 30px;
+}
+#target p {
+  font-size: 9px;
+  color: #868e96;
+}
+#personal-info {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 30px 30px;
+}
+#personal-info ul {
+  font-size: 9px;
+  color: #868e96;
+  line-height: 2;
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+li span {
+  color: #495057;
+}
+.section-title {
+  margin: 20px 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+.personal-info-icon {
+  color: #2a9ddb;
+}
+
+/* JOB-INFO */
+/* Chia lưới cho phần JOB (kinh nghiệm, học vấn .... */
+.job-container {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: 500px 1fr;
+  margin: 30px auto;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-content: center;
+}
+/* Chia lưới cho các grid item con */
+.job-container--smallbox {
+  border: 1px solid #dee2e6;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 100px 1fr;
+  margin: 0;
+}
+
+.job-container--smallbox-1 {
+  overflow: hidden;
+}
+.job-container--smallbox-1:hover {
+  overflow: scroll;
+  /* Ẩn Scrollbar bottom đi */
+  overflow-x: hidden;
+}
+
+.job-container--smallbox h2 {
+  font-weight: 500;
+  font-size: 20px;
+  align-self: center;
+  padding-left: 20px;
+}
+.job-info-icon {
+  /* Do đây là các iconfont nên có các tính chất giống như text */
+  align-self: center;
+  transform: translate(0, -10%); /*Căn chỉnh vị trí icon cho phù hợp*/
+  height: 30px;
+  font-size: 30px;
+  color: #adb5bd;
+}
+
+.job-container-content {
+  grid-column: 1 / -1; /*thiết lập vị trí cho box trong lưới con*/
+  padding: 10px 30px;
+  line-height: 1.7;
+}
+
+.job-content-detail {
+  margin-left: 10px;
+}
+/* Thay đổi style bullet list li và căn chỉnh vị trí bullet mới*/
+.job-container-content-ul li {
+  list-style: none;
+  position: relative;
+  margin-bottom: 30px;
+}
+.job-container-content-ul li::before {
+  content: "";
+  position: absolute;
+  left: -1em; /*1em tương đương với font-size của phần tử cha trực tiếp*/
+  top: 6px;
+  height: 6px;
+  width: 6px;
+  background-color: #2a9ddb;
+  border-radius: 100%;
+}
+.job-content-detail-company {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.job-content-detail-time {
+  font-style: italic;
+  margin-bottom: 3px;
+  font-size: 10px;
+  color: #7b7d7f;
+}
+/* Thiết lập element thời gian "Hiện tại" */
+.job-content-detail-time-current {
+  display: inline-block;
+  color: #fff;
+  background-color: #2a9ddb;
+  padding: 0 7px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+.job-content-detail-des {
+  font-size: 11px;
+  color: #7b7d7f;
+}
+/* HOBBY */
+.job-container--smallbox-hobby {
+  /* căn chỉnh lại lưới cho 2 hàng gần nhau hơn*/
+  grid-template-rows: 80px 1fr;
+}
+.job-container-content-hobby {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
+  align-content: flex-start;
+}
+.hobby {
+  font-size: 10px;
+  color: #7b7d7f;
+}
+
+/* Tạo 1 thẻ div bao quanh icon để tạo box căn giữa icon */
+.hobby-box {
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  color: #2a9ddb;
+  border: 1px solid #2a9ddb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 5px auto;
+}
+/* LANGUAGE */
+.job-container-content-langskill {
+  padding: 0 20px;
+}
+.job-container-content-component {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.job-container-content-component span {
+  display: inline-block;
+  height: 4px;
+  width: 50px;
+  border: 1px solid #dee2e6;
+  background-color: #dee2e6;
+  border-radius: 2px;
+  margin-top: 5px;
+  margin-right: 3px;
+}
+.job-container-content-component span.skill-checked {
+  background-color: #2a9ddb;
+}
+/* certificate */
+
+.certificate-img {
+  height: 75px;
+}
+.certificate-box {
+  display: flex;
+  gap: 20px;
+  padding: 30px 0;
+  /* border: 2px solid #d6c08d; */
+  position: relative;
+  font-size: 10px;
+}
+/* Tạo border */
+.certificate-box-border {
+  border-bottom: 1px solid #d6c08d;
+  padding-left: 20px;
+}
+/* Tạo border giữa bằng pseudo-element áp dụng cho box thứ 2 */
+.certificate-box-border::after {
+  content: "";
+  position: absolute;
+  height: 75px;
+  width: 1px;
+  background-color: #d6c08d;
+  left: 0;
+}
+
+.certificate-box-1 {
+  border-bottom: 1px solid #d6c08d;
+}
+
+.container-certificate {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  justify-content: center;
+}
+.certificate-tilte {
+  grid-column: 1 / -1;
+}
+.certificate-tilte {
+  margin-bottom: 0px;
+  margin-top: 30px;
+}
+.certificate-content-detail {
+  color: #7b7d7f;
+  margin-bottom: 5px;
+}
+.certificate-content-title {
+  margin-bottom: 5px;
+}
+/* PROJECT */
+#project {
+  margin-bottom: 30px;
+}
+.project-title {
+  margin-top: 40px;
+  margin-left: 70px;
+}
+.img-project {
+  max-width: 100%;
+  height: 200px;
+  /* Dịch hình ảnh xuống 6px cho sát với border các phần tử khác */
+  transform: translate(0, 6px);
+}
+.project-name {
+  padding: 10px 10px;
+  border: 1px solid #dee2e6;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: #495057;
+}
+
+.project-timeline {
+  border: 1px solid #dee2e6;
+  border-top: none;
+  border-bottom: none;
+  padding: 10px;
+  color: #7b7d7f;
+  font-size: 10px;
+  /* set flexbox để căn chỉnh 3 item bên trong */
+  display: flex;
+  gap: 20px;
+}
+.project-timeline-year {
+  background-color: #2a9ddb;
+  color: #fff;
+  border-radius: 13px;
+  padding: 1px 10px;
+  font-size: 8px;
+  /*thiết lập flex để căn chỉnh center*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Chia lưới cho phần project */
+.container-project {
+  display: grid;
+  grid-template-columns: 28.5% 28.5% 28.5%;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 40px;
+}
+
+.project-timeline {
+  display: flex;
+}
+.project-content {
+  color: #7b7d7f;
+  border: 1px solid #dee2e6;
+  border-bottom: none;
+  overflow: hidden;
+}
+/* Thiết lập lại vị trí và chiều cao nội dung cho box cuối (dự án cuối cùng) */
+.project-box-lastbox {
+  grid-column: 2 / 3;
+}
+.project-content-lastitem {
+  height: auto;
+}
+.project-box {
+  display: flex;
+  flex-direction: column;
+}
+/* Dùng pseudo class để tự động thêm 1 box để lấp đầy khoảng trống còn dư của project box, để cho chiều cao các project box luôn bằng nhau
+do không dùng border cho toàn project box vì border sẽ bao cả img nên phải dùng border cho từng thành phần bên trong */
+.project-box::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border: 1px solid #dee2e6;
+  border-top: none;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 10px;
+}
+
+th {
+  padding: 5px;
+  width: 25%;
+  /* Căn chỉnh văn bản theo chiều ngang */
+  text-align: left;
+  /* căn chỉnh văn bản theo chiều dọc */
+  vertical-align: top;
+  font-weight: 500;
+  border: 1px solid #dee2e6;
+  /* bỏ border bên phải để làm mất thanh ngăn giữa th và td */
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+}
+td {
+  padding: 5px;
+  border: 1px solid #dee2e6;
+  /* Căn chỉnh văn bản theo chiều ngang */
+  text-align: left;
+  /* căn chỉnh văn bản theo chiều dọc */
+  vertical-align: top;
+  /* bỏ border bên trái để làm mất thanh ngăn giữa th và td */
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+/* FOOTER */
+
+.container-footer ul {
+  list-style: none;
+  height: 100px;
+  /* Cho ul là flexbox để căn chỉnh các item bên trong*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.icon-footer {
+  display: inline-block;
+  color: #2a9ddb;
+  font-size: 20px;
+}
+.container-footer ul li {
+  /* đặt li là flexbox căn chỉnh 2 item bên trong */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.icon-footer-title {
+  color: #868e96;
+}
+
+/* RESPONSIVE */
+/* Chỉnh lại 1 số element từ 768px đến 1200px trên laptop hiển thị rõ ràng hơn */
+@media (max-width: 1200px) {
+  .img-project {
+    height: 100px;
+  }
+  .job-container-content {
+    padding: 0;
+  }
+  .job-container-content-hobby {
+    padding: 0 10px;
+  }
+  .job-container-content-langskill {
+    padding: 10px 10px;
+  }
+  .project-title {
+    margin-left: 50px;
+  }
+}

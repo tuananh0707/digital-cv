@@ -1,0 +1,219 @@
+/* Mobile */
+@media (max-width: 500px) {
+  /* BANNER */
+  #banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../images/banner.jpg);
+    background-position: center;
+  }
+
+  /* NAVBAR */
+  .nav-bar-container-link:link,
+  .nav-bar-container-link:visited {
+    font-size: 14px;
+  }
+  .nav-bar-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .nav-bar-container-group-item3 {
+    display: none;
+  }
+  .nav-bar-container-group-item1,
+  .nav-bar-container-group-item2,
+  .nav-bar-container-group-item4,
+  .nav-bar-container-group-item5 {
+    border: none;
+    justify-content: flex-start;
+  }
+
+  /* ABOUT */
+  .about-container {
+    flex-direction: column;
+  }
+  #target p {
+    font-size: 14px;
+  }
+  #personal-info ul {
+    font-size: 14px;
+    padding: 0;
+  }
+  .about-container h2 {
+    font-size: 32px;
+  }
+  /* JOB */
+  .job-container {
+    height: max-content;
+  }
+
+  .job-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .job-container--smallbox {
+    width: 100%;
+  }
+
+  .job-container--smallbox-1 {
+    overflow: hidden;
+    height: max-content;
+    order: 1;
+  }
+  .job-container--smallbox-1:hover {
+    overflow: hidden;
+  }
+  .job-container-content-hobby {
+    justify-content: flex-start;
+    padding: 0 40px 0 20px;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    align-content: flex-end;
+  }
+
+  .job-container--smallbox-education {
+    order: 5;
+  }
+  .job-container--smallbox-activity {
+    order: 4;
+  }
+  .job-container--smallbox-hobby {
+    order: 6;
+  }
+  .job-container--smallbox-language {
+    order: 3;
+  }
+  .job-container--smallbox-skill {
+    order: 2;
+  }
+  .hobby {
+    text-align: center;
+    font-size: 14px;
+  }
+  .hobby-icon {
+    font-size: 40px;
+  }
+  .hobby-box {
+    height: 70px;
+    width: 70px;
+  }
+  .job-container--smallbox h2 {
+    font-size: 32px;
+  }
+  .job-content-detail-company {
+    font-size: 16px;
+  }
+  .job-content-detail-time {
+    font-size: 12px;
+  }
+  .job-content-detail-des {
+    font-size: 14px;
+  }
+  .job-container-content-langskill p {
+    font-size: 14px;
+  }
+
+  /* CERTIFICATE */
+
+  .certificate-tilte {
+    font-size: 44px;
+    margin-bottom: 50px;
+  }
+
+  .container-certificate {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .certificate-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .certificate-img {
+    height: 200px;
+  }
+
+  .certificate-content-title {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  .certificate-content-detail {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .certificate-box-border::after {
+    content: "";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+  }
+
+  .certificate-box-border {
+    border-bottom: 2px solid #d6c08d;
+  }
+  .certificate-box-1 {
+    border-bottom: 2px solid #d6c08d;
+  }
+
+  /* PROJECT */
+  .project-title {
+    font-size: 44px;
+    margin-bottom: 50px;
+    margin-left: 0;
+  }
+
+  .img-project {
+    height: 250px;
+    width: 100%;
+    /* Dịch hình ảnh xuống 6px cho sát với border các phần tử khác */
+    transform: translate(0, 6px);
+  }
+  .container-project {
+    display: flex;
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  .project-name {
+    font-size: 14px;
+  }
+
+  .project-timeline {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .project-timeline-year {
+    font-size: 12px;
+    width: fit-content;
+  }
+
+  .project-content {
+    height: auto;
+  }
+
+  /* FOOTER */
+  #footer {
+    margin-top: 50px;
+  }
+  .container-footer ul {
+    margin: 0;
+  }
+  .icon-footer {
+    font-size: 40px;
+  }
+  .container-footer ul li span {
+    /* Ẩn title icon */
+    display: none;
+  }
+}
